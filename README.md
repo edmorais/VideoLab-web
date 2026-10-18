@@ -13,6 +13,8 @@ technical properties of a moving picture while it plays:
 Sources: the built-in test card, the webcam, or any video or image file (open it or drop it on the deck).
 Every lab has a tutorial in English and Portuguese.
 
+See it in action at <https://edmorais.github.io/VideoLab-web/>
+
 The original Videolab was written in Processing by Eduardo Morais (2013–2021):
 <https://github.com/edmorais/VideoLab>
 
