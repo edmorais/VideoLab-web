@@ -1,0 +1,312 @@
+{
+  "lang": "en",
+  "name": "English",
+  "ui": {
+    "tips": {
+      "live": "LIVE — use the webcam",
+      "load": "LOAD FILE — open a video or image from your computer",
+      "cassette": "Open a video or image file (you can also drop it here)",
+      "test": "TEST SIGNAL — Videolab's built-in test card",
+      "still": "STILL — freeze / resume the picture (Space)",
+      "slower": "Slower playback (↓)",
+      "faster": "Faster playback (↑)",
+      "zoom": "ZOOM — magnify ×2 to ×16 (Z). Click the screen to aim, drag to pan",
+      "osd": "Show or hide the on-screen text (O)",
+      "snap": "Save the current picture as PNG (Shift+S)",
+      "help": "Tutorial for the current lab (H)",
+      "lang": "Mudar para português (L)",
+      "mon43": "Standard 4:3 monitor (M)",
+      "mon169": "Widescreen 16:9 monitor (M)",
+      "mode-res": "Lab 1 — Resolution",
+      "mode-fps": "Lab 2 — Frame rate",
+      "mode-aspect": "Lab 3 — Aspect ratio and anamorphic formats",
+      "mode-interlace": "Lab 4 — Progressive and interlaced scanning",
+      "mode-sampling": "Lab 5 — Luminance, chrominance and chroma sampling",
+      "mode-depth": "Lab 6 — Colour depth",
+      "res-lines": "Number of lines (vertical resolution). Width follows the picture's shape.",
+      "res-scaler": "How the small raster is enlarged back to the screen",
+      "fps-rate": "Frames recorded per second",
+      "fps-shutter": "Portion of each frame interval during which the image is exposed",
+      "aspect-picture": "Shape of the picture being shot",
+      "aspect-fit": "How the picture is placed on a screen of a different shape",
+      "aspect-anamorphic": "SQUEEZE records a wide picture in a 4:3 frame; UNSQUEEZE tells the monitor to stretch it back",
+      "interlace-scan": "Progressive frames, woven fields, a single field, or line-doubled fields",
+      "interlace-system": "50 Hz (PAL, Europe) or 60 Hz (NTSC, Americas and Japan)",
+      "interlace-lines": "Makes each scan line thicker so the structure is easy to see",
+      "sampling-scheme": "How many pixels share one chrominance sample",
+      "sampling-display": "Show luminance (Y), chrominance (CbCr), or both",
+      "sampling-exag": "Enlarge the chroma blocks to make the effect obvious",
+      "depth-bits": "Bits used for each of R, G and B",
+      "depth-options": "Ordered dithering and a gradient chart overlay"
+    },
+    "help": { "prev": "Back", "next": "Next", "done": "Done", "close": "Close tutorial" },
+    "panel_empty": "Choose a lab mode above, or press <kbd>1</kbd>–<kbd>6</kbd>. Each lab has its own controls here and a short tutorial under <kbd>?</kbd>."
+  },
+  "msg": {
+    "cam_starting_t": "CAMERA",
+    "cam_starting": "Waiting for permission to use the webcam…",
+    "cam_blocked_t": "CAMERA NOT AVAILABLE",
+    "cam_blocked": "This page was not allowed to use the camera. If you are viewing Videolab inside another page, open it at its own address (https or localhost) and allow camera access. The test signal and your own files work everywhere.",
+    "cam_none_t": "NO CAMERA FOUND",
+    "cam_none": "No webcam is connected to this computer. Use the test signal or open a video file.",
+    "cam_error_t": "CAMERA ERROR",
+    "cam_error": "The webcam could not be started.",
+    "loading_t": "LOADING",
+    "file_error_t": "CANNOT PLAY THIS FILE",
+    "file_error": "Your browser cannot decode this file. Try an MP4 (H.264) or WebM video, or a JPEG/PNG image.",
+    "snap_t": "PICTURE SAVED",
+    "snap_fail_t": "PICTURE NOT SAVED",
+    "snap_fail": "Saving files is not available in this view.",
+    "help_missing_t": "NO TUTORIAL",
+    "help_missing": "The tutorial text could not be loaded."
+  },
+  "fig": {
+    "scale_note": "all drawn to the same scale",
+    "resolution": "Common video rasters to scale",
+    "framerate": "Frames sampled during the first quarter of a second",
+    "shutter": "Exposure within each frame interval",
+    "exposure": "filled = shutter open · box = one frame interval",
+    "aspect": "Aspect ratios at equal height",
+    "fitting": "Placing a picture on a screen of another shape",
+    "letterbox": "LETTERBOX",
+    "pillarbox": "PILLARBOX",
+    "crop": "CROP",
+    "stretch": "STRETCH",
+    "anamorphic": "Anamorphic recording",
+    "shoot": "SHOT",
+    "store": "RECORDED",
+    "display": "SHOWN",
+    "pixels": "Pixel aspect ratios",
+    "par_hd": "HD, UHD, computers",
+    "par_sd43": "PAL SD 4:3",
+    "par_sd169": "PAL SD 16:9",
+    "par_ntsc": "NTSC SD 4:3",
+    "scanning": "Order in which lines are drawn",
+    "progressive": "PROGRESSIVE",
+    "interlaced": "INTERLACED",
+    "field_a": "field A",
+    "field_b": "field B",
+    "combing": "Two fields woven into one frame",
+    "weave": "50i, WOVEN",
+    "luma": "Contribution of each primary to luminance",
+    "sampling": "Chroma subsampling patterns",
+    "data": "data",
+    "luma_sample": "one luminance sample per pixel",
+    "chroma_sample": "one colour = one shared chroma sample",
+    "bitdepth": "Levels per channel"
+  },
+  "help": {
+    "intro": {
+      "label": "Videolab",
+      "pages": [
+        {
+          "title": "Welcome to Videolab",
+          "body": "<p>Videolab lets you see, and change, the technical properties of a digital video image while it plays. Six labs each simulate one concept:</p><ul><li><strong>Resolution</strong>: how many pixels make up the picture;</li><li><strong>Frame rate</strong>: how many pictures are taken each second;</li><li><strong>Aspect ratio</strong> and anamorphic formats: the shape of the picture;</li><li><strong>Interlaced scanning</strong>: lines, fields and combing;</li><li><strong>Chroma sampling</strong>: luminance, chrominance and subsampling;</li><li><strong>Colour depth</strong>: bits per channel and banding.</li></ul><p>Every lab works on the built-in test signal, on your webcam, or on any video or image you open.</p>"
+        },
+        {
+          "title": "Choose a signal",
+          "targets": ["source", "load", "screen"],
+          "body": "<p><strong>LIVE</strong> uses your webcam; the browser will ask for permission. <strong>LOAD FILE</strong> opens a video or image from your computer. You can also drop a file onto the deck. Files stay on your computer.</p><p><strong>TEST SIGNAL</strong> plays Videolab's test card, designed to show every effect: the circle and squares (aspect), the gradients (colour depth), the coloured lettering (chroma), the fine lines (resolution and interlace), and the moving ball and wheel (motion).</p>"
+        },
+        {
+          "title": "Transport and display",
+          "targets": ["transport", "vfd"],
+          "body": "<p><strong>STILL</strong> freezes the picture. The two <strong>SPEED</strong> keys slow playback down to 1/16 or speed it up to ×2. Slow motion makes frames and fields much easier to see.</p><p>The display shows the time code (hours:minutes:seconds:frames) and the current settings.</p>"
+        },
+        {
+          "title": "Lab modes",
+          "targets": ["modes", "panel"],
+          "body": "<p>Choose one of the six labs. Its controls appear on the panel below. The first time you open a lab, a short tutorial explains the concept. Press <kbd>?</kbd> at any time to read it again.</p><p>Press the lit lab key again to switch the lab off and see the untouched signal.</p>"
+        },
+        {
+          "title": "Looking closer",
+          "targets": ["display", "monitor-aspect", "screen"],
+          "body": "<p><strong>ZOOM</strong> magnifies the picture from ×2 to ×16. Click the screen to choose where to look, and drag to move around. Double-click toggles a ×4 zoom; the mouse wheel also zooms. From about ×8 a grid outlines each pixel.</p><p><strong>4:3 / 16:9</strong> changes the shape of the monitor. <strong>SNAP</strong> saves the picture, <strong>OSD</strong> hides the on-screen text, and <strong>LANGUAGE</strong> switches between English and Portuguese.</p>"
+        },
+        {
+          "title": "Keyboard",
+          "body": "<table><tr><td><kbd>Space</kbd></td><td>still / play</td></tr><tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>playback speed</td></tr><tr><td><kbd>1</kbd>–<kbd>6</kbd>, <kbd>0</kbd></td><td>choose a lab, or switch labs off</td></tr><tr><td><kbd>Z</kbd></td><td>zoom (<kbd>Shift</kbd>+<kbd>Z</kbd> zooms out)</td></tr><tr><td><kbd>M</kbd></td><td>4:3 or 16:9 monitor</td></tr><tr><td><kbd>O</kbd></td><td>on-screen text</td></tr><tr><td><kbd>Shift</kbd>+<kbd>S</kbd></td><td>save picture</td></tr><tr><td><kbd>H</kbd> <kbd>?</kbd> <kbd>F1</kbd></td><td>tutorial; <kbd>←</kbd> <kbd>→</kbd> turn pages</td></tr><tr><td><kbd>L</kbd></td><td>language</td></tr><tr><td><kbd>Esc</kbd></td><td>close the tutorial, or leave the lab</td></tr></table><p class=\"small\" style=\"margin-top:.8em\">Videolab was created by Eduardo Morais in 2013 as a Processing application for teaching digital video. This web edition rebuilds it for the browser.</p>"
+        }
+      ]
+    },
+    "res": {
+      "label": "Resolution",
+      "pages": [
+        {
+          "title": "Pixels and lines",
+          "body": "<p>A digital picture is a grid of <em>pixels</em> (picture elements). Each pixel holds one colour value. Its <em>resolution</em> is the number of pixels across times the number of lines down, for example 1920 × 1080.</p><p>Any detail smaller than a pixel cannot be recorded. In video, formats are often named by their number of lines: 576, 720, 1080, 2160.</p>"
+        },
+        {
+          "title": "Common formats",
+          "figure": "resolution",
+          "body": "<p><strong>SD</strong>: 720 × 576 (PAL, Europe) or 720 × 480 (NTSC), used by DV, DVCAM and DVD. <strong>HD</strong>: 1280 × 720. <strong>Full HD</strong>: 1920 × 1080. <strong>UHD</strong>: 3840 × 2160, sold as “4K” television; cinema 4K (DCI) is 4096 × 2160.</p><p>Doubling the number of lines multiplies the number of pixels by four: Full HD has about 2.1 million pixels, UHD about 8.3 million.</p>"
+        },
+        {
+          "title": "Resolution is not sharpness",
+          "body": "<p>Resolution is the <em>capacity</em> to record detail. The detail you really get also depends on the lens, focus, movement and compression.</p><p>Enlarging a picture never adds detail: the scaler only estimates the missing values. <strong>Nearest neighbour</strong> repeats each pixel and shows blocks. <strong>Bilinear</strong> blends neighbours and looks soft.</p><p class=\"small\">If your webcam delivers 640 × 480, choosing 2160 lines will not improve it. The screen shows <em>UPSCALED</em> when this happens. Your own monitor also has a limited number of pixels: use ZOOM to see the finest rasters.</p>"
+        },
+        {
+          "title": "Try it",
+          "targets": ["res-lines", "res-scaler", "screen"],
+          "body": "<p>Lower the number of lines and watch the vertical bars in the middle of the test card. When the raster cannot reproduce them, the bars turn grey or form false patterns: this is <em>aliasing</em> (moiré).</p><p>Compare the two scalers, then use ZOOM ×8 or more to see the pixel grid.</p>"
+        }
+      ]
+    },
+    "fps": {
+      "label": "Frame rate",
+      "pages": [
+        {
+          "title": "Pictures per second",
+          "body": "<p>Video, like film, is a sequence of still pictures shown in quick succession. Our perception fuses them into continuous movement.</p><p>The number of pictures per second is the <em>frame rate</em>, measured in frames per second (<em>fps</em>). A higher rate samples movement more often, so motion looks smoother, but it needs more data.</p>"
+        },
+        {
+          "title": "Standard rates",
+          "figure": "framerate",
+          "body": "<p><strong>24 fps</strong>: cinema, since sound film in the late 1920s. <strong>25 fps</strong>: PAL and SECAM television (Europe), tied to the 50 Hz power grid. <strong>30 fps</strong> (precisely 29.97): NTSC television (Americas, Japan), tied to 60 Hz. <strong>50 and 60 fps</strong>: sport, live television and games.</p><p class=\"small\">The 29.97 rate dates from the introduction of NTSC colour in 1953, which slowed 30 fps by 0.1 %.</p>"
+        },
+        {
+          "title": "Shutter and motion blur",
+          "figure": "shutter",
+          "body": "<p>Each frame is exposed for only part of its interval. Film cameras used a rotating disc, so exposure is still described as a <em>shutter angle</em>: 360° exposes the whole interval, 180° half of it.</p><p>The classic choice is 180°, an exposure of 1/(2 × fps): 1/50 s at 25 fps. Longer exposures blur moving objects. Shorter ones give sharp frames, but movement looks jerky and stroboscopic.</p>"
+        },
+        {
+          "title": "Temporal aliasing",
+          "body": "<p>A repeating movement close to the frame rate can seem to stop or run backwards. This is the <em>wagon-wheel effect</em>.</p><p>The wheel on the test card has 12 spokes and turns twice per second, so its pattern repeats 24 times per second. At 24 fps it seems frozen; at 25 fps it drifts backwards. The red spoke shows the real rotation.</p>"
+        },
+        {
+          "title": "Try it",
+          "targets": ["fps-rate", "fps-shutter", "screen"],
+          "body": "<p>Change the frame rate and the shutter angle while you watch the ball and the wheel.</p><p class=\"small\">Most screens refresh 60 times per second. Rates that do not divide 60 exactly (50, 25, 24) are shown with uneven repetitions, a stutter called <em>judder</em>. Television had the same problem when showing 24 fps films at 60 Hz, solved with the 3:2 pulldown.</p>"
+        }
+      ]
+    },
+    "aspect": {
+      "label": "Aspect ratio",
+      "pages": [
+        {
+          "title": "The shape of the picture",
+          "figure": "aspect",
+          "body": "<p>The <em>aspect ratio</em> is the proportion between the width and the height of the picture. It is written as a ratio, 4:3, or as a decimal, 1.33:1.</p><p>The most common ratios in video are 4:3, called <em>standard</em>, and 16:9, called <em>widescreen</em>. Cinema also uses 1.85:1 and 2.39:1 (“scope”).</p>"
+        },
+        {
+          "title": "From 4:3 to 16:9",
+          "body": "<p><strong>4:3</strong> (1.33) was close to the shape of cinema until the 1950s and was the shape of television for most of its history. When television spread, cinema answered with much wider formats.</p><p><strong>16:9</strong> (1.78) was proposed in the 1980s as a compromise: 4:3 and 2.39 both fit into it with similar black bars. It became the standard for HD and almost every screen sold today.</p>"
+        },
+        {
+          "title": "Different shapes on one screen",
+          "figure": "fitting",
+          "body": "<p>When the picture and the screen have different shapes, there are three choices:</p><ul><li><strong>Box</strong>: show the whole picture and add black bars, above and below (<em>letterbox</em>) or at the sides (<em>pillarbox</em>);</li><li><strong>Crop</strong>: fill the screen and lose part of the picture (pan &amp; scan);</li><li><strong>Stretch</strong>: fill the screen by distorting the picture, so circles become ellipses.</li></ul>"
+        },
+        {
+          "title": "Anamorphic formats",
+          "figure": "anamorphic",
+          "body": "<p>An <em>anamorphic</em> format records a wide picture squeezed into a narrower frame, and the display stretches it back.</p><p>CinemaScope lenses squeezed the picture by 2× onto 35 mm film. SD video does the same: DV, DVCAM and DVD record 16:9 in the same 720 × 576 frame as 4:3, and a signal tells the television to unsqueeze it. If the display ignores it, people look too tall and thin.</p>"
+        },
+        {
+          "title": "Pixel aspect ratio",
+          "figure": "pixels",
+          "body": "<p>Because of anamorphic recording, SD pixels are not square. The shape on screen depends on the number of pixels and on their shape:</p><p class=\"formula\">DISPLAY ASPECT = (WIDTH ÷ HEIGHT) × PIXEL ASPECT</p><p>HD, UHD and computer images use square pixels (1:1). Editing software must know the pixel aspect of SD footage, or it will show it distorted.</p>"
+        },
+        {
+          "title": "Try it",
+          "targets": ["aspect-picture", "aspect-fit", "aspect-anamorphic", "monitor-aspect", "screen"],
+          "body": "<p>Change the shape of the picture and of the monitor, then compare box, crop and stretch. On the test card, the circle must stay round and the grid squares must stay square.</p><p>Choose a 16:9 picture and press <strong>SQUEEZE</strong>: the inset shows what is recorded on tape. Switch <strong>UNSQUEEZE</strong> off to see the picture on a monitor that ignores the anamorphic signal.</p>"
+        }
+      ]
+    },
+    "interlace": {
+      "label": "Interlaced scanning",
+      "pages": [
+        {
+          "title": "Scanning the picture",
+          "figure": "scanning",
+          "body": "<p>A cathode-ray tube (CRT) television draws the picture with an electron beam, line by line, from top to bottom. It fills the screen in a fraction of a second.</p><p>The first television systems, in the 1930s, could not transmit enough lines 50 times per second. The solution was to scan the picture in an <em>interlaced</em> way.</p>"
+        },
+        {
+          "title": "Progressive video",
+          "figure": "progressive",
+          "body": "<p>In <em>progressive</em> video each frame is complete: all its lines show the same instant, like a frame of film.</p><p>At 25 progressive frames per second (25p), pictures are taken 40 ms apart (1 s ÷ 25).</p>"
+        },
+        {
+          "title": "Interlaced video",
+          "figure": "interlaced",
+          "body": "<p>In <em>interlaced</em> video each picture is divided into two <em>fields</em>: one with the odd lines, one with the even lines. The fields are captured one after the other.</p><p>At 50 fields per second (50i), each field is captured 20 ms after the previous one. The two fields of one frame show two different instants. Motion is sampled 50 times per second, but each sample has only half the lines.</p>"
+        },
+        {
+          "title": "Combing and deinterlacing",
+          "figure": "combing",
+          "body": "<p>A CRT shows the fields one after the other. Flat screens and computers show whole frames, so the two fields are woven together and moving edges show teeth: <em>combing</em>.</p><p><em>Deinterlacing</em> converts fields to frames: <strong>weave</strong> joins two fields (sharp, but combs on motion); <strong>bob</strong> stretches each field to full height (smooth, but softer and with flickering edges). Fine horizontal lines also flicker on interlaced displays, an effect called <em>twitter</em>.</p>"
+        },
+        {
+          "title": "Format names",
+          "body": "<p>The letter after the number of lines tells the scanning: <strong>576i</strong> (PAL SD, used by DV and DVCAM), <strong>480i</strong> (NTSC SD), <strong>1080i</strong> (broadcast HD), <strong>720p</strong> and <strong>1080p</strong>.</p><p class=\"small\">The number after the letter is written in different ways. 1080i50 and 1080i/25 describe the same signal: 50 fields, or 25 frames, per second.</p>"
+        },
+        {
+          "title": "Try it",
+          "targets": ["interlace-scan", "interlace-system", "interlace-lines", "speed", "screen"],
+          "body": "<p>Compare <strong>PROG</strong> and <strong>INTER</strong> while the ball moves. <strong>FIELD</strong> shows one field at a time, as a CRT would; <strong>BOB</strong> shows a line-doubled field.</p><p>Slow playback down to 1/16 to see the two fields alternate. <strong>LINE SIZE</strong> makes each line thicker, so the structure is easier to see.</p>"
+        }
+      ]
+    },
+    "sampling": {
+      "label": "Chroma sampling",
+      "pages": [
+        {
+          "title": "Luminance and chrominance",
+          "body": "<p>When colour television arrived (NTSC in 1953, PAL and SECAM in the 1960s), the signal had to stay compatible with black-and-white sets.</p><p>The solution was <em>component video</em>: send the brightness information, the <em>luminance</em>, as before, and add two colour channels, the <em>chrominance</em>. Black-and-white sets ignore the chrominance; colour sets rebuild the RGB picture from all three.</p>"
+        },
+        {
+          "title": "From RGB to Y′CbCr",
+          "figure": "luma",
+          "body": "<p>Cameras and screens work in RGB, but most video formats store luminance and chrominance. Luminance (Y′) is a weighted sum of the three primaries:</p><p class=\"formula\">Y′ = 0.299 R + 0.587 G + 0.114 B</p><p>The two chrominance channels are colour differences: Cb is based on B − Y′ and Cr on R − Y′. Together they are called Y′CbCr in digital video, often shortened to YUV.</p><p class=\"small\">These weights come from SD (BT.601); HD (BT.709) uses slightly different ones.</p>"
+        },
+        {
+          "title": "Sampling",
+          "body": "<p>Our vision is more sensitive to fine detail in brightness than to fine detail in colour.</p><p>To save data, most video formats record chrominance at a lower resolution than luminance. This is <em>chroma subsampling</em>. The loss is hard to see in natural pictures.</p>"
+        },
+        {
+          "title": "Types of subsampling",
+          "figure": "sampling",
+          "body": "<p>The notation describes a block 4 pixels wide and 2 lines high:</p><ul><li><strong>4:4:4</strong>: every pixel has its own chrominance (no subsampling);</li><li><strong>4:2:2</strong>: two pixels side by side share it (professional formats, broadcast);</li><li><strong>4:2:0</strong>: a 2 × 2 square of pixels shares it (DV and DVCAM in PAL, DVD, Blu-ray, streaming);</li><li><strong>4:1:1</strong>: four pixels in a row share it (DV and DVCAM in NTSC).</li></ul>"
+        },
+        {
+          "title": "Where it shows",
+          "body": "<p>Subsampling shows at sharp edges between strong colours, such as red titles on blue. It also matters for chroma keying (green screen), where the colour edge defines the mask, and in colour grading.</p><p>Each new compression with subsampling can soften colour edges further.</p>"
+        },
+        {
+          "title": "Try it",
+          "targets": ["sampling-display", "sampling-scheme", "screen"],
+          "body": "<p>Switch luminance (<strong>Y</strong>) and chrominance (<strong>CbCr</strong>) on and off. With Y only you see a black-and-white television picture. With CbCr only you see how little detail colour carries.</p><p>Then try the different subsampling types on the coloured lettering of the test card.</p>"
+        },
+        {
+          "title": "Make it obvious",
+          "targets": ["sampling-exag", "zoom", "screen"],
+          "body": "<p><strong>EXAGGERATE</strong> enlarges the chroma blocks so the effect is visible at a glance. At ×1 the simulation is true to scale.</p><p>Use ZOOM on a coloured edge to see the real blocks pixel by pixel.</p>"
+        }
+      ]
+    },
+    "depth": {
+      "label": "Colour depth",
+      "pages": [
+        {
+          "title": "Bits per channel",
+          "figure": "bitdepth",
+          "body": "<p><em>Colour depth</em> is the number of bits used for each channel (R, G, B or Y′, Cb, Cr) of every pixel. It sets how many values the channel can take:</p><p class=\"formula\">LEVELS = 2<sup>BITS</sup></p><p>With 4 bits per channel, each primary has 16 levels, so a pixel can take 16 × 16 × 16 = 4096 colours.</p>"
+        },
+        {
+          "title": "8 bits and beyond",
+          "body": "<p>With 8 bits per channel, each primary has 256 levels: more than 16.7 million colours. This roughly matches what we can tell apart, and most delivery formats use it.</p><p>But 8 bits leave little room for colour and contrast changes in post-production. Professional formats and HDR use 10 bits (1024 levels) or 12 bits (4096 levels).</p><p class=\"small\">Video often keeps luminance between 16 and 235, so 8-bit video has only 220 levels of brightness.</p>"
+        },
+        {
+          "title": "Banding and dithering",
+          "body": "<p>With too few levels, smooth gradients such as skies or vignettes show visible steps: <em>banding</em>, also called posterisation. It gets worse when contrast is pushed in grading.</p><p><em>Dithering</em> adds a fine pattern of noise before rounding. The steps break up and the eye averages them into a smoother gradient.</p>"
+        },
+        {
+          "title": "Try it",
+          "targets": ["depth-bits", "depth-options", "screen"],
+          "body": "<p>Lower the number of bits and watch the gradients and the sky. <strong>GRADIENT</strong> places a chart of ramps over the picture; <strong>DITHER</strong> applies an ordered 4 × 4 dither.</p><p class=\"small\">Most screens show 8 bits per channel, so depths above 8 cannot be simulated. The low depths show the kind of banding that appears when 8-bit footage is graded.</p>"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "lang": "pt",
+  "name": "Português",
+  "ui": {
+    "tips": {
+      "live": "LIVE — usar a webcam",
+      "load": "LOAD FILE — abrir um vídeo ou uma imagem do computador",
+      "cassette": "Abrir um ficheiro de vídeo ou imagem (também o podes largar aqui)",
+      "test": "TEST SIGNAL — mira de teste do Videolab",
+      "still": "STILL — congelar / retomar a imagem (Espaço)",
+      "slower": "Reprodução mais lenta (↓)",
+      "faster": "Reprodução mais rápida (↑)",
+      "zoom": "ZOOM — ampliar de ×2 a ×16 (Z). Clica no ecrã para apontar e arrasta para mover",
+      "osd": "Mostrar ou esconder o texto no ecrã (O)",
+      "snap": "Guardar a imagem atual em PNG (Shift+S)",
+      "help": "Tutorial do laboratório atual (H)",
+      "lang": "Switch to English (L)",
+      "mon43": "Monitor standard 4:3 (M)",
+      "mon169": "Monitor panorâmico 16:9 (M)",
+      "mode-res": "Laboratório 1 — Resolução",
+      "mode-fps": "Laboratório 2 — Cadência de imagem",
+      "mode-aspect": "Laboratório 3 — Relação de aspeto e formatos anamórficos",
+      "mode-interlace": "Laboratório 4 — Varrimento progressivo e entrelaçado",
+      "mode-sampling": "Laboratório 5 — Luminância, crominância e amostragem cromática",
+      "mode-depth": "Laboratório 6 — Profundidade de cor",
+      "res-lines": "Número de linhas (resolução vertical). A largura acompanha o formato da imagem.",
+      "res-scaler": "Forma como a imagem pequena é ampliada de novo para o ecrã",
+      "fps-rate": "Imagens registadas por segundo",
+      "fps-shutter": "Parte de cada intervalo durante a qual a imagem é exposta",
+      "aspect-picture": "Formato da imagem filmada",
+      "aspect-fit": "Forma de colocar a imagem num ecrã com outro formato",
+      "aspect-anamorphic": "SQUEEZE grava uma imagem larga num quadro 4:3; UNSQUEEZE indica ao monitor que a deve esticar",
+      "interlace-scan": "Imagens progressivas, campos entrelaçados, um só campo ou campos com linhas duplicadas",
+      "interlace-system": "50 Hz (PAL, Europa) ou 60 Hz (NTSC, Américas e Japão)",
+      "interlace-lines": "Torna cada linha mais grossa para que a estrutura se veja melhor",
+      "sampling-scheme": "Quantos píxeis partilham uma amostra de crominância",
+      "sampling-display": "Mostrar a luminância (Y), a crominância (CbCr) ou ambas",
+      "sampling-exag": "Aumenta os blocos de crominância para tornar o efeito evidente",
+      "depth-bits": "Bits usados em cada canal R, G e B",
+      "depth-options": "Dithering ordenado e mira de gradientes sobreposta"
+    },
+    "help": { "prev": "Anterior", "next": "Seguinte", "done": "Concluir", "close": "Fechar tutorial" },
+    "panel_empty": "Escolhe um laboratório acima ou carrega em <kbd>1</kbd>–<kbd>6</kbd>. Cada laboratório tem aqui os seus controlos e um tutorial curto em <kbd>?</kbd>."
+  },
+  "msg": {
+    "cam_starting_t": "CÂMARA",
+    "cam_starting": "À espera de autorização para usar a webcam…",
+    "cam_blocked_t": "CÂMARA INDISPONÍVEL",
+    "cam_blocked": "Esta página não tem autorização para usar a câmara. Se estás a ver o Videolab dentro de outra página, abre-o no seu próprio endereço (https ou localhost) e autoriza a câmara. A mira de teste e os teus ficheiros funcionam em qualquer caso.",
+    "cam_none_t": "NENHUMA CÂMARA",
+    "cam_none": "Não há nenhuma webcam ligada a este computador. Usa a mira de teste ou abre um ficheiro de vídeo.",
+    "cam_error_t": "ERRO DA CÂMARA",
+    "cam_error": "Não foi possível iniciar a webcam.",
+    "loading_t": "A CARREGAR",
+    "file_error_t": "FICHEIRO NÃO REPRODUZÍVEL",
+    "file_error": "O navegador não consegue descodificar este ficheiro. Experimenta um vídeo MP4 (H.264) ou WebM, ou uma imagem JPEG/PNG.",
+    "snap_t": "IMAGEM GUARDADA",
+    "snap_fail_t": "IMAGEM NÃO GUARDADA",
+    "snap_fail": "Não é possível guardar ficheiros nesta vista.",
+    "help_missing_t": "SEM TUTORIAL",
+    "help_missing": "Não foi possível carregar o texto do tutorial."
+  },
+  "fig": {
+    "scale_note": "todos à mesma escala",
+    "resolution": "Resoluções de vídeo comuns, à escala",
+    "framerate": "Imagens registadas no primeiro quarto de segundo",
+    "shutter": "Exposição em cada intervalo de imagem",
+    "exposure": "preenchido = obturador aberto · caixa = intervalo de uma imagem",
+    "aspect": "Relações de aspeto com a mesma altura",
+    "fitting": "Colocar uma imagem num ecrã com outro formato",
+    "letterbox": "LETTERBOX",
+    "pillarbox": "PILLARBOX",
+    "crop": "CORTE",
+    "stretch": "ESTICAR",
+    "anamorphic": "Gravação anamórfica",
+    "shoot": "FILMADO",
+    "store": "GRAVADO",
+    "display": "MOSTRADO",
+    "pixels": "Relações de aspeto do píxel",
+    "par_hd": "HD, UHD, computadores",
+    "par_sd43": "PAL SD 4:3",
+    "par_sd169": "PAL SD 16:9",
+    "par_ntsc": "NTSC SD 4:3",
+    "scanning": "Ordem pela qual as linhas são desenhadas",
+    "progressive": "PROGRESSIVO",
+    "interlaced": "ENTRELAÇADO",
+    "field_a": "campo A",
+    "field_b": "campo B",
+    "combing": "Dois campos combinados numa imagem",
+    "weave": "50i, COMBINADO",
+    "luma": "Contribuição de cada primária para a luminância",
+    "sampling": "Padrões de amostragem cromática",
+    "data": "dados",
+    "luma_sample": "uma amostra de luminância por píxel",
+    "chroma_sample": "uma cor = uma amostra de crominância partilhada",
+    "bitdepth": "Níveis por canal"
+  },
+  "help": {
+    "intro": {
+      "label": "Videolab",
+      "pages": [
+        {
+          "title": "Bem-vindo ao Videolab",
+          "body": "<p>No Videolab podes ver, e alterar, as características técnicas de uma imagem de vídeo digital enquanto ela é reproduzida. Seis laboratórios simulam um conceito cada:</p><ul><li><strong>Resolução</strong>: quantos píxeis formam a imagem;</li><li><strong>Cadência</strong>: quantas imagens são registadas por segundo;</li><li><strong>Relação de aspeto</strong> e formatos anamórficos: o formato da imagem;</li><li><strong>Varrimento entrelaçado</strong>: linhas, campos e efeito de pente;</li><li><strong>Amostragem cromática</strong>: luminância, crominância e <em>subsampling</em>;</li><li><strong>Profundidade de cor</strong>: bits por canal e bandas.</li></ul><p>Todos os laboratórios funcionam com a mira de teste, com a tua webcam ou com qualquer vídeo ou imagem que abras.</p>"
+        },
+        {
+          "title": "Escolhe um sinal",
+          "targets": ["source", "load", "screen"],
+          "body": "<p><strong>LIVE</strong> usa a tua webcam; o navegador pede autorização. <strong>LOAD FILE</strong> abre um vídeo ou uma imagem do teu computador. Também podes largar um ficheiro sobre o aparelho. Os ficheiros não saem do teu computador.</p><p><strong>TEST SIGNAL</strong> mostra a mira de teste do Videolab, desenhada para revelar todos os efeitos: o círculo e os quadrados (aspeto), os gradientes (profundidade de cor), as letras coloridas (crominância), as linhas finas (resolução e entrelaçamento) e a bola e a roda em movimento (movimento).</p>"
+        },
+        {
+          "title": "Reprodução e mostrador",
+          "targets": ["transport", "vfd"],
+          "body": "<p><strong>STILL</strong> congela a imagem. As duas teclas <strong>SPEED</strong> abrandam a reprodução até 1/16 ou aceleram-na até ×2. Em câmara lenta, as imagens e os campos veem-se muito melhor.</p><p>O mostrador indica o código de tempo (horas:minutos:segundos:imagens) e as definições atuais.</p>"
+        },
+        {
+          "title": "Laboratórios",
+          "targets": ["modes", "panel"],
+          "body": "<p>Escolhe um dos seis laboratórios. Os seus controlos aparecem no painel em baixo. Da primeira vez que abres um laboratório, um tutorial curto explica o conceito. Carrega em <kbd>?</kbd> sempre que o quiseres ler de novo.</p><p>Carrega de novo na tecla acesa para desligar o laboratório e ver o sinal original.</p>"
+        },
+        {
+          "title": "Ver de perto",
+          "targets": ["display", "monitor-aspect", "screen"],
+          "body": "<p><strong>ZOOM</strong> amplia a imagem de ×2 a ×16. Clica no ecrã para escolher onde olhar e arrasta para te deslocares. O duplo clique liga e desliga uma ampliação ×4; a roda do rato também amplia. A partir de cerca de ×8, uma grelha contorna cada píxel.</p><p><strong>4:3 / 16:9</strong> muda o formato do monitor. <strong>SNAP</strong> guarda a imagem, <strong>OSD</strong> esconde o texto no ecrã e <strong>LANGUAGE</strong> alterna entre português e inglês.</p>"
+        },
+        {
+          "title": "Teclado",
+          "body": "<table><tr><td><kbd>Espaço</kbd></td><td>congelar / reproduzir</td></tr><tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>velocidade de reprodução</td></tr><tr><td><kbd>1</kbd>–<kbd>6</kbd>, <kbd>0</kbd></td><td>escolher um laboratório ou desligá-lo</td></tr><tr><td><kbd>Z</kbd></td><td>ampliar (<kbd>Shift</kbd>+<kbd>Z</kbd> reduz)</td></tr><tr><td><kbd>M</kbd></td><td>monitor 4:3 ou 16:9</td></tr><tr><td><kbd>O</kbd></td><td>texto no ecrã</td></tr><tr><td><kbd>Shift</kbd>+<kbd>S</kbd></td><td>guardar imagem</td></tr><tr><td><kbd>H</kbd> <kbd>?</kbd> <kbd>F1</kbd></td><td>tutorial; <kbd>←</kbd> <kbd>→</kbd> mudam de página</td></tr><tr><td><kbd>L</kbd></td><td>língua</td></tr><tr><td><kbd>Esc</kbd></td><td>fechar o tutorial ou sair do laboratório</td></tr></table><p class=\"small\" style=\"margin-top:.8em\">O Videolab foi criado por Eduardo Morais em 2013, como aplicação Processing para o ensino do vídeo digital. Esta edição web reconstrói-o para o navegador.</p>"
+        }
+      ]
+    },
+    "res": {
+      "label": "Resolução",
+      "pages": [
+        {
+          "title": "Píxeis e linhas",
+          "body": "<p>Uma imagem digital é uma grelha de <em>píxeis</em> (elementos de imagem). Cada píxel guarda um único valor de cor. A <em>resolução</em> é o número de píxeis na largura vezes o número de linhas na altura, por exemplo 1920 × 1080.</p><p>Um pormenor mais pequeno do que um píxel não pode ser registado. Em vídeo, os formatos têm muitas vezes o nome do seu número de linhas: 576, 720, 1080, 2160.</p>"
+        },
+        {
+          "title": "Formatos comuns",
+          "figure": "resolution",
+          "body": "<p><strong>SD</strong>: 720 × 576 (PAL, Europa) ou 720 × 480 (NTSC), usado no DV, no DVCAM e no DVD. <strong>HD</strong>: 1280 × 720. <strong>Full HD</strong>: 1920 × 1080. <strong>UHD</strong>: 3840 × 2160, vendido como televisão “4K”; o 4K de cinema (DCI) tem 4096 × 2160.</p><p>Duplicar o número de linhas multiplica o número de píxeis por quatro: o Full HD tem cerca de 2,1 milhões de píxeis, o UHD cerca de 8,3 milhões.</p>"
+        },
+        {
+          "title": "Resolução não é nitidez",
+          "body": "<p>A resolução é a <em>capacidade</em> de registar pormenor. O pormenor que realmente obténs depende também da objetiva, da focagem, do movimento e da compressão.</p><p>Ampliar uma imagem nunca acrescenta pormenor: o algoritmo de escala apenas estima os valores em falta. O <strong>vizinho mais próximo</strong> repete cada píxel e mostra blocos. O <strong>bilinear</strong> mistura os vizinhos e fica suave.</p><p class=\"small\">Se a tua webcam fornece 640 × 480, escolher 2160 linhas não a melhora. O ecrã indica <em>UPSCALED</em> quando isto acontece. O teu monitor também tem um número limitado de píxeis: usa o ZOOM para veres as resoluções mais finas.</p>"
+        },
+        {
+          "title": "Experimenta",
+          "targets": ["res-lines", "res-scaler", "screen"],
+          "body": "<p>Reduz o número de linhas e observa as barras verticais a meio da mira. Quando a grelha de píxeis não as consegue reproduzir, as barras ficam cinzentas ou formam padrões falsos: é o <em>aliasing</em> (moiré).</p><p>Compara os dois algoritmos de escala e usa o ZOOM ×8 ou mais para veres a grelha de píxeis.</p>"
+        }
+      ]
+    },
+    "fps": {
+      "label": "Cadência",
+      "pages": [
+        {
+          "title": "Imagens por segundo",
+          "body": "<p>O vídeo, tal como o cinema, é uma sequência de imagens fixas mostradas muito depressa. A nossa perceção junta-as num movimento contínuo.</p><p>O número de imagens por segundo é a <em>cadência</em> (<em>frame rate</em>), medida em imagens por segundo (<em>fps</em>). Uma cadência maior regista o movimento mais vezes, por isso o movimento parece mais fluido, mas exige mais dados.</p>"
+        },
+        {
+          "title": "Cadências normalizadas",
+          "figure": "framerate",
+          "body": "<p><strong>24 fps</strong>: cinema, desde o cinema sonoro no final dos anos 1920. <strong>25 fps</strong>: televisão PAL e SECAM (Europa), ligada à rede elétrica de 50 Hz. <strong>30 fps</strong> (exatamente 29,97): televisão NTSC (Américas, Japão), ligada aos 60 Hz. <strong>50 e 60 fps</strong>: desporto, televisão em direto e jogos.</p><p class=\"small\">A cadência de 29,97 vem da introdução da cor no NTSC, em 1953, que abrandou os 30 fps em 0,1 %.</p>"
+        },
+        {
+          "title": "Obturador e arrastamento",
+          "figure": "shutter",
+          "body": "<p>Cada imagem é exposta só durante parte do seu intervalo. As câmaras de cinema usavam um disco rotativo, por isso a exposição ainda se descreve por um <em>ângulo de obturador</em>: 360° expõe todo o intervalo, 180° metade.</p><p>A escolha clássica é 180°, uma exposição de 1/(2 × fps): 1/50 s a 25 fps. Exposições mais longas arrastam os objetos em movimento. Exposições mais curtas dão imagens nítidas, mas o movimento parece aos saltos, estroboscópico.</p>"
+        },
+        {
+          "title": "Aliasing temporal",
+          "body": "<p>Um movimento repetitivo próximo da cadência pode parecer parar ou andar para trás. É o <em>efeito da roda de carroça</em>.</p><p>A roda da mira tem 12 raios e dá duas voltas por segundo, por isso o seu padrão repete-se 24 vezes por segundo. A 24 fps parece parada; a 25 fps recua devagar. O raio vermelho mostra a rotação real.</p>"
+        },
+        {
+          "title": "Experimenta",
+          "targets": ["fps-rate", "fps-shutter", "screen"],
+          "body": "<p>Muda a cadência e o ângulo do obturador enquanto observas a bola e a roda.</p><p class=\"small\">A maioria dos ecrãs atualiza 60 vezes por segundo. As cadências que não dividem 60 exatamente (50, 25, 24) são mostradas com repetições irregulares, um tremor chamado <em>judder</em>. A televisão tinha o mesmo problema ao mostrar filmes de 24 fps a 60 Hz e resolveu-o com o <em>3:2 pulldown</em>.</p>"
+        }
+      ]
+    },
+    "aspect": {
+      "label": "Relação de aspeto",
+      "pages": [
+        {
+          "title": "O formato da imagem",
+          "figure": "aspect",
+          "body": "<p>A <em>relação de aspeto</em> é a proporção entre a largura e a altura da imagem. Escreve-se como uma razão, 4:3, ou como um número decimal, 1,33:1.</p><p>As relações mais comuns em vídeo são a 4:3, dita <em>standard</em>, e a 16:9, dita <em>panorâmica</em>. O cinema usa também 1,85:1 e 2,39:1 (“scope”).</p>"
+        },
+        {
+          "title": "Do 4:3 ao 16:9",
+          "body": "<p>O <strong>4:3</strong> (1,33) era próximo do formato do cinema até aos anos 1950 e foi o formato da televisão durante quase toda a sua história. Quando a televisão se espalhou, o cinema respondeu com formatos muito mais largos.</p><p>O <strong>16:9</strong> (1,78) foi proposto nos anos 1980 como compromisso: tanto o 4:3 como o 2,39 cabem nele com barras pretas semelhantes. Tornou-se a norma da alta definição e de quase todos os ecrãs vendidos hoje.</p>"
+        },
+        {
+          "title": "Formatos diferentes num ecrã",
+          "figure": "fitting",
+          "body": "<p>Quando a imagem e o ecrã têm formatos diferentes, há três opções:</p><ul><li><strong>Caixa</strong>: mostrar a imagem inteira e acrescentar barras pretas, em cima e em baixo (<em>letterbox</em>) ou dos lados (<em>pillarbox</em>);</li><li><strong>Corte</strong>: preencher o ecrã e perder parte da imagem (<em>pan &amp; scan</em>);</li><li><strong>Esticar</strong>: preencher o ecrã distorcendo a imagem, e os círculos passam a elipses.</li></ul>"
+        },
+        {
+          "title": "Formatos anamórficos",
+          "figure": "anamorphic",
+          "body": "<p>Um formato <em>anamórfico</em> grava uma imagem larga comprimida num quadro mais estreito, e o ecrã volta a esticá-la.</p><p>As objetivas CinemaScope comprimiam a imagem 2× na película de 35 mm. O vídeo SD faz o mesmo: o DV, o DVCAM e o DVD gravam 16:9 no mesmo quadro de 720 × 576 do 4:3, e um sinal indica ao televisor que a deve esticar. Se o ecrã o ignorar, as pessoas parecem demasiado altas e magras.</p>"
+        },
+        {
+          "title": "Relação de aspeto do píxel",
+          "figure": "pixels",
+          "body": "<p>Por causa da gravação anamórfica, os píxeis SD não são quadrados. O formato no ecrã depende do número de píxeis e da sua forma:</p><p class=\"formula\">ASPETO NO ECRÃ = (LARGURA ÷ ALTURA) × ASPETO DO PÍXEL</p><p>As imagens HD, UHD e de computador usam píxeis quadrados (1:1). O software de edição tem de conhecer o aspeto do píxel das imagens SD; caso contrário, mostra-as distorcidas.</p>"
+        },
+        {
+          "title": "Experimenta",
+          "targets": ["aspect-picture", "aspect-fit", "aspect-anamorphic", "monitor-aspect", "screen"],
+          "body": "<p>Muda o formato da imagem e do monitor e compara caixa, corte e esticar. Na mira, o círculo tem de continuar redondo e os quadrados da grelha têm de continuar quadrados.</p><p>Escolhe uma imagem 16:9 e carrega em <strong>SQUEEZE</strong>: a miniatura mostra o que fica gravado na fita. Desliga <strong>UNSQUEEZE</strong> para veres a imagem num monitor que ignora o sinal anamórfico.</p>"
+        }
+      ]
+    },
+    "interlace": {
+      "label": "Varrimento entrelaçado",
+      "pages": [
+        {
+          "title": "O varrimento da imagem",
+          "figure": "scanning",
+          "body": "<p>Um televisor de tubo de raios catódicos (CRT) desenha a imagem com um feixe de eletrões, linha a linha, de cima para baixo. Preenche o ecrã numa fração de segundo.</p><p>Os primeiros sistemas de televisão, nos anos 1930, não conseguiam transmitir linhas suficientes 50 vezes por segundo. A solução foi fazer o varrimento da imagem de forma <em>entrelaçada</em>.</p>"
+        },
+        {
+          "title": "Vídeo progressivo",
+          "figure": "progressive",
+          "body": "<p>No vídeo <em>progressivo</em> cada imagem é completa: todas as suas linhas mostram o mesmo instante, como um fotograma de cinema.</p><p>A 25 imagens progressivas por segundo (25p), as imagens são registadas com 40 ms de intervalo (1 s ÷ 25).</p>"
+        },
+        {
+          "title": "Vídeo entrelaçado",
+          "figure": "interlaced",
+          "body": "<p>No vídeo <em>entrelaçado</em> cada imagem divide-se em dois <em>campos</em>: um com as linhas ímpares, outro com as linhas pares. Os campos são registados um depois do outro.</p><p>A 50 campos por segundo (50i), cada campo é registado 20 ms depois do anterior. Os dois campos de uma imagem mostram dois instantes diferentes. O movimento é registado 50 vezes por segundo, mas cada registo tem só metade das linhas.</p>"
+        },
+        {
+          "title": "Efeito de pente e desentrelaçamento",
+          "figure": "combing",
+          "body": "<p>Um CRT mostra os campos um a seguir ao outro. Os ecrãs planos e os computadores mostram imagens inteiras, por isso os dois campos são combinados e os contornos em movimento mostram dentes: o <em>efeito de pente</em> (<em>combing</em>).</p><p>O <em>desentrelaçamento</em> converte campos em imagens: o <strong>weave</strong> junta dois campos (nítido, mas com pente no movimento); o <strong>bob</strong> estica cada campo à altura toda (fluido, mas mais suave e com contornos a tremer). As linhas horizontais finas também tremem num ecrã entrelaçado, um efeito chamado <em>twitter</em>.</p>"
+        },
+        {
+          "title": "Nomes dos formatos",
+          "body": "<p>A letra a seguir ao número de linhas indica o varrimento: <strong>576i</strong> (PAL SD, usado no DV e no DVCAM), <strong>480i</strong> (NTSC SD), <strong>1080i</strong> (HD de emissão), <strong>720p</strong> e <strong>1080p</strong>.</p><p class=\"small\">O número a seguir à letra escreve-se de formas diferentes. 1080i50 e 1080i/25 descrevem o mesmo sinal: 50 campos, ou 25 imagens, por segundo.</p>"
+        },
+        {
+          "title": "Experimenta",
+          "targets": ["interlace-scan", "interlace-system", "interlace-lines", "speed", "screen"],
+          "body": "<p>Compara <strong>PROG</strong> e <strong>INTER</strong> enquanto a bola se move. <strong>FIELD</strong> mostra um campo de cada vez, como num CRT; <strong>BOB</strong> mostra um campo com as linhas duplicadas.</p><p>Abranda a reprodução até 1/16 para veres os dois campos a alternar. <strong>LINE SIZE</strong> torna cada linha mais grossa, para que a estrutura se veja melhor.</p>"
+        }
+      ]
+    },
+    "sampling": {
+      "label": "Amostragem cromática",
+      "pages": [
+        {
+          "title": "Luminância e crominância",
+          "body": "<p>Quando chegou a televisão a cores (NTSC em 1953, PAL e SECAM nos anos 1960), o sinal tinha de continuar compatível com os televisores a preto e branco.</p><p>A solução foi o <em>vídeo por componentes</em>: enviar a informação de luminosidade, a <em>luminância</em>, como antes, e acrescentar dois canais de cor, a <em>crominância</em>. Os televisores a preto e branco ignoram a crominância; os televisores a cores reconstroem a imagem RGB a partir dos três canais.</p>"
+        },
+        {
+          "title": "De RGB para Y′CbCr",
+          "figure": "luma",
+          "body": "<p>As câmaras e os ecrãs trabalham em RGB, mas a maioria dos formatos de vídeo guarda luminância e crominância. A luminância (Y′) é uma soma ponderada das três primárias:</p><p class=\"formula\">Y′ = 0,299 R + 0,587 G + 0,114 B</p><p>Os dois canais de crominância são diferenças de cor: o Cb baseia-se em B − Y′ e o Cr em R − Y′. Juntos chamam-se Y′CbCr no vídeo digital, muitas vezes abreviado para YUV.</p><p class=\"small\">Estes pesos são os do SD (BT.601); o HD (BT.709) usa pesos ligeiramente diferentes.</p>"
+        },
+        {
+          "title": "Amostragem",
+          "body": "<p>A nossa visão é mais sensível ao pormenor na luminosidade do que ao pormenor na cor.</p><p>Para poupar dados, a maioria dos formatos de vídeo regista a crominância com menos resolução do que a luminância. É a <em>amostragem cromática</em> (<em>chroma subsampling</em>). A perda é difícil de ver em imagens naturais.</p>"
+        },
+        {
+          "title": "Tipos de amostragem",
+          "figure": "sampling",
+          "body": "<p>A notação descreve um bloco com 4 píxeis de largura e 2 linhas de altura:</p><ul><li><strong>4:4:4</strong>: cada píxel tem a sua própria crominância (sem redução);</li><li><strong>4:2:2</strong>: dois píxeis lado a lado partilham-na (formatos profissionais, emissão);</li><li><strong>4:2:0</strong>: um quadrado de 2 × 2 píxeis partilha-a (DV e DVCAM em PAL, DVD, Blu-ray, streaming);</li><li><strong>4:1:1</strong>: quatro píxeis em linha partilham-na (DV e DVCAM em NTSC).</li></ul>"
+        },
+        {
+          "title": "Onde se nota",
+          "body": "<p>A amostragem nota-se nos contornos nítidos entre cores fortes, como títulos vermelhos sobre azul. Também é importante no <em>chroma key</em> (fundo verde), onde o contorno da cor define a máscara, e na correção de cor.</p><p>Cada nova compressão com amostragem pode suavizar ainda mais os contornos da cor.</p>"
+        },
+        {
+          "title": "Experimenta",
+          "targets": ["sampling-display", "sampling-scheme", "screen"],
+          "body": "<p>Liga e desliga a luminância (<strong>Y</strong>) e a crominância (<strong>CbCr</strong>). Só com Y vês uma imagem de televisão a preto e branco. Só com CbCr vês o pouco pormenor que a cor transporta.</p><p>Depois experimenta os vários tipos de amostragem nas letras coloridas da mira.</p>"
+        },
+        {
+          "title": "Tornar o efeito evidente",
+          "targets": ["sampling-exag", "zoom", "screen"],
+          "body": "<p><strong>EXAGGERATE</strong> aumenta os blocos de crominância para que o efeito se veja de imediato. Em ×1 a simulação é fiel à escala real.</p><p>Usa o ZOOM sobre um contorno colorido para veres os blocos reais, píxel a píxel.</p>"
+        }
+      ]
+    },
+    "depth": {
+      "label": "Profundidade de cor",
+      "pages": [
+        {
+          "title": "Bits por canal",
+          "figure": "bitdepth",
+          "body": "<p>A <em>profundidade de cor</em> é o número de bits usados em cada canal (R, G, B ou Y′, Cb, Cr) de cada píxel. Define quantos valores o canal pode ter:</p><p class=\"formula\">NÍVEIS = 2<sup>BITS</sup></p><p>Com 4 bits por canal, cada primária tem 16 níveis, por isso um píxel pode ter 16 × 16 × 16 = 4096 cores.</p>"
+        },
+        {
+          "title": "8 bits e mais",
+          "body": "<p>Com 8 bits por canal, cada primária tem 256 níveis: mais de 16,7 milhões de cores. Isto corresponde aproximadamente ao que conseguimos distinguir, e a maioria dos formatos de distribuição usa-o.</p><p>Mas 8 bits deixam pouca margem para ajustes de cor e de contraste na pós-produção. Os formatos profissionais e o HDR usam 10 bits (1024 níveis) ou 12 bits (4096 níveis).</p><p class=\"small\">O vídeo mantém muitas vezes a luminância entre 16 e 235, por isso o vídeo de 8 bits tem só 220 níveis de luminosidade.</p>"
+        },
+        {
+          "title": "Bandas e dithering",
+          "body": "<p>Com poucos níveis, os gradientes suaves, como céus ou vinhetas, mostram degraus visíveis: <em>bandas</em> (<em>banding</em>), também chamadas posterização. Pioram quando se força o contraste na correção de cor.</p><p>O <em>dithering</em> acrescenta um padrão fino de ruído antes do arredondamento. Os degraus desfazem-se e o olho mistura-os num gradiente mais suave.</p>"
+        },
+        {
+          "title": "Experimenta",
+          "targets": ["depth-bits", "depth-options", "screen"],
+          "body": "<p>Reduz o número de bits e observa os gradientes e o céu. <strong>GRADIENT</strong> sobrepõe uma mira de rampas à imagem; <strong>DITHER</strong> aplica um <em>dithering</em> ordenado de 4 × 4.</p><p class=\"small\">A maioria dos ecrãs mostra 8 bits por canal, por isso não é possível simular profundidades acima de 8. As profundidades baixas mostram o tipo de bandas que aparecem quando se corrige a cor de imagens de 8 bits.</p>"
+        }
+      ]
+    }
+  }
+}
