@@ -31,15 +31,20 @@
       "aspect-fit": "Forma de colocar a imagem num ecrã com outro formato",
       "aspect-anamorphic": "SQUEEZE grava uma imagem larga num quadro 4:3; UNSQUEEZE indica ao monitor que a deve esticar",
       "interlace-scan": "Imagens progressivas, campos entrelaçados, um só campo ou campos com linhas duplicadas",
-      "interlace-system": "50 Hz (PAL, Europa) ou 60 Hz (NTSC, Américas e Japão)",
       "interlace-lines": "Torna cada linha mais grossa para que a estrutura se veja melhor",
       "sampling-scheme": "Quantos píxeis partilham uma amostra de crominância",
       "sampling-display": "Mostrar a luminância (Y), a crominância (CbCr) ou ambas",
       "sampling-exag": "Aumenta os blocos de crominância para tornar o efeito evidente",
       "depth-bits": "Bits usados em cada canal R, G e B",
-      "depth-options": "Dithering ordenado e mira de gradientes sobreposta"
+      "depth-options": "Dithering ordenado e mira de gradientes sobreposta",
+      "interlace-rate": "Imagens por segundo. Cada imagem entrelaçada tem dois campos: 25 imagens = 50 campos (PAL), 30 = 60 (NTSC). As cadências baixas deixam ver os campos a alternar."
     },
-    "help": { "prev": "Anterior", "next": "Seguinte", "done": "Concluir", "close": "Fechar tutorial" },
+    "help": {
+      "prev": "Anterior",
+      "next": "Seguinte",
+      "done": "Concluir",
+      "close": "Fechar tutorial"
+    },
     "panel_empty": "Escolhe um laboratório acima ou carrega em <kbd>1</kbd>–<kbd>6</kbd>. Cada laboratório tem aqui os seus controlos e um tutorial curto em <kbd>?</kbd>."
   },
   "msg": {
@@ -105,22 +110,36 @@
         },
         {
           "title": "Escolhe um sinal",
-          "targets": ["source", "load", "screen"],
+          "targets": [
+            "source",
+            "load",
+            "screen"
+          ],
           "body": "<p><strong>LIVE</strong> usa a tua webcam; o navegador pede autorização. <strong>LOAD FILE</strong> abre um vídeo ou uma imagem do teu computador. Também podes largar um ficheiro sobre o aparelho. Os ficheiros não saem do teu computador.</p><p><strong>TEST SIGNAL</strong> mostra a mira de teste do Videolab, desenhada para revelar todos os efeitos: o círculo e os quadrados (aspeto), os gradientes (profundidade de cor), as letras coloridas (crominância), as linhas finas (resolução e entrelaçamento) e a bola e a roda em movimento (movimento).</p>"
         },
         {
           "title": "Reprodução e mostrador",
-          "targets": ["transport", "vfd"],
+          "targets": [
+            "transport",
+            "vfd"
+          ],
           "body": "<p><strong>STILL</strong> congela a imagem. As duas teclas <strong>SPEED</strong> abrandam a reprodução até 1/16 ou aceleram-na até ×2. Em câmara lenta, as imagens e os campos veem-se muito melhor.</p><p>O mostrador indica o código de tempo (horas:minutos:segundos:imagens) e as definições atuais.</p>"
         },
         {
           "title": "Laboratórios",
-          "targets": ["modes", "panel"],
+          "targets": [
+            "modes",
+            "panel"
+          ],
           "body": "<p>Escolhe um dos seis laboratórios. Os seus controlos aparecem no painel em baixo. Da primeira vez que abres um laboratório, um tutorial curto explica o conceito. Carrega em <kbd>?</kbd> sempre que o quiseres ler de novo.</p><p>Carrega de novo na tecla acesa para desligar o laboratório e ver o sinal original.</p>"
         },
         {
           "title": "Ver de perto",
-          "targets": ["display", "monitor-aspect", "screen"],
+          "targets": [
+            "display",
+            "monitor-aspect",
+            "screen"
+          ],
           "body": "<p><strong>ZOOM</strong> amplia a imagem de ×2 a ×16. Clica no ecrã para escolher onde olhar e arrasta para te deslocares. O duplo clique liga e desliga uma ampliação ×4; a roda do rato também amplia. A partir de cerca de ×8, uma grelha contorna cada píxel.</p><p><strong>4:3 / 16:9</strong> muda o formato do monitor. <strong>SNAP</strong> guarda a imagem, <strong>OSD</strong> esconde o texto no ecrã e <strong>LANGUAGE</strong> alterna entre português e inglês.</p>"
         },
         {
@@ -147,7 +166,11 @@
         },
         {
           "title": "Experimenta",
-          "targets": ["res-lines", "res-scaler", "screen"],
+          "targets": [
+            "res-lines",
+            "res-scaler",
+            "screen"
+          ],
           "body": "<p>Reduz o número de linhas e observa as barras verticais a meio da mira. Quando a grelha de píxeis não as consegue reproduzir, as barras ficam cinzentas ou formam padrões falsos: é o <em>aliasing</em> (moiré).</p><p>Compara os dois algoritmos de escala e usa o ZOOM ×8 ou mais para veres a grelha de píxeis.</p>"
         }
       ]
@@ -175,7 +198,11 @@
         },
         {
           "title": "Experimenta",
-          "targets": ["fps-rate", "fps-shutter", "screen"],
+          "targets": [
+            "fps-rate",
+            "fps-shutter",
+            "screen"
+          ],
           "body": "<p>Muda a cadência e o ângulo do obturador enquanto observas a bola e a roda.</p><p class=\"small\">A maioria dos ecrãs atualiza 60 vezes por segundo. As cadências que não dividem 60 exatamente (50, 25, 24) são mostradas com repetições irregulares, um tremor chamado <em>judder</em>. A televisão tinha o mesmo problema ao mostrar filmes de 24 fps a 60 Hz e resolveu-o com o <em>3:2 pulldown</em>.</p>"
         }
       ]
@@ -209,7 +236,13 @@
         },
         {
           "title": "Experimenta",
-          "targets": ["aspect-picture", "aspect-fit", "aspect-anamorphic", "monitor-aspect", "screen"],
+          "targets": [
+            "aspect-picture",
+            "aspect-fit",
+            "aspect-anamorphic",
+            "monitor-aspect",
+            "screen"
+          ],
           "body": "<p>Muda o formato da imagem e do monitor e compara caixa, corte e esticar. Na mira, o círculo tem de continuar redondo e os quadrados da grelha têm de continuar quadrados.</p><p>Escolhe uma imagem 16:9 e carrega em <strong>SQUEEZE</strong>: a miniatura mostra o que fica gravado na fita. Desliga <strong>UNSQUEEZE</strong> para veres a imagem num monitor que ignora o sinal anamórfico.</p>"
         }
       ]
@@ -243,8 +276,14 @@
         },
         {
           "title": "Experimenta",
-          "targets": ["interlace-scan", "interlace-system", "interlace-lines", "speed", "screen"],
-          "body": "<p>Compara <strong>PROG</strong> e <strong>INTER</strong> enquanto a bola se move. <strong>FIELD</strong> mostra um campo de cada vez, como num CRT; <strong>BOB</strong> mostra um campo com as linhas duplicadas.</p><p>Abranda a reprodução até 1/16 para veres os dois campos a alternar. <strong>LINE SIZE</strong> torna cada linha mais grossa, para que a estrutura se veja melhor.</p>"
+          "targets": [
+            "interlace-scan",
+            "interlace-rate",
+            "interlace-lines",
+            "speed",
+            "screen"
+          ],
+          "body": "<p>Compara <strong>PROG</strong> e <strong>INTER</strong> enquanto a bola se move. <strong>FIELD</strong> mostra um campo de cada vez, como num CRT; <strong>BOB</strong> mostra um campo com as linhas duplicadas.</p><p><strong>FRAME RATE</strong> define as imagens por segundo; cada imagem entrelaçada tem dois campos, por isso 25 imagens dão 50 campos. A 2 ou 1 imagens por segundo vês os campos a alternar; também podes abrandar a reprodução até 1/16. <strong>LINE SIZE</strong> torna cada linha mais grossa, para que a estrutura se veja melhor.</p>"
         }
       ]
     },
@@ -275,12 +314,20 @@
         },
         {
           "title": "Experimenta",
-          "targets": ["sampling-display", "sampling-scheme", "screen"],
+          "targets": [
+            "sampling-display",
+            "sampling-scheme",
+            "screen"
+          ],
           "body": "<p>Liga e desliga a luminância (<strong>Y</strong>) e a crominância (<strong>CbCr</strong>). Só com Y vês uma imagem de televisão a preto e branco. Só com CbCr vês o pouco pormenor que a cor transporta.</p><p>Depois experimenta os vários tipos de amostragem nas letras coloridas da mira.</p>"
         },
         {
           "title": "Tornar o efeito evidente",
-          "targets": ["sampling-exag", "zoom", "screen"],
+          "targets": [
+            "sampling-exag",
+            "zoom",
+            "screen"
+          ],
           "body": "<p><strong>EXAGGERATE</strong> aumenta os blocos de crominância para que o efeito se veja de imediato. Em ×1 a simulação é fiel à escala real.</p><p>Usa o ZOOM sobre um contorno colorido para veres os blocos reais, píxel a píxel.</p>"
         }
       ]
@@ -303,7 +350,11 @@
         },
         {
           "title": "Experimenta",
-          "targets": ["depth-bits", "depth-options", "screen"],
+          "targets": [
+            "depth-bits",
+            "depth-options",
+            "screen"
+          ],
           "body": "<p>Reduz o número de bits e observa os gradientes e o céu. <strong>GRADIENT</strong> sobrepõe uma mira de rampas à imagem; <strong>DITHER</strong> aplica um <em>dithering</em> ordenado de 4 × 4.</p><p class=\"small\">A maioria dos ecrãs mostra 8 bits por canal, por isso não é possível simular profundidades acima de 8. As profundidades baixas mostram o tipo de bandas que aparecem quando se corrige a cor de imagens de 8 bits.</p>"
         }
       ]

@@ -517,7 +517,7 @@ const state = {
   res: { lines: 144, scaler: 'nearest' },
   fps: { rate: 12, shutter: 180 },
   aspect: { picture: '16:9', fit: 'fit', anamorphic: false, desqueeze: true },
-  interlace: { scan: 'i', system: 50, lines: 2 },
+  interlace: { scan: 'i', rate: 25, lines: 2 },
   sampling: { scheme: '420', y: true, c: true, exag: 2 },
   depth: { bits: 4, dither: false, gradient: true }
 };
@@ -539,7 +539,7 @@ const PANELS = {
   ],
   interlace: [
     { id: 'interlace-scan', key: 'scan', title: 'SCANNING', opts: [['p', 'PROG'], ['i', 'INTER'], ['field', 'FIELD'], ['bob', 'BOB']] },
-    { id: 'interlace-system', key: 'system', title: 'SYSTEM', opts: [[50, '50 Hz', 'PAL'], [60, '60 Hz', 'NTSC']] },
+    { id: 'interlace-rate', key: 'rate', title: 'FRAME RATE', opts: [[30, '30', 'NTSC'], [25, '25', 'PAL'], [12, '12', ''], [6, '6', ''], [2, '2', ''], [1, '1', '']] },
     { id: 'interlace-lines', key: 'lines', title: 'LINE SIZE', opts: [[1, '×1'], [2, '×2'], [4, '×4'], [8, '×8']] }
   ],
   sampling: [
@@ -1045,12 +1045,12 @@ function writeLines(img, parity) {
 }
 function labInterlace() {
   const s = state.interlace;
-  const rate = s.system;
+  const fps = s.rate, rate = fps * 2; // two fields per frame
   const t = srcTime();
   if (!fieldBuf || fieldBuf.width !== W || fieldBuf.height !== H) { fieldBuf = wctx.createImageData(W, H); outBuf = wctx.createImageData(W, H); lastFi = null; }
   if (s.scan === 'p') {
-    const fr = Math.floor(t * rate / 2 + 1e-7);
-    if (fr !== lastFi) { writeLines(grab(srcFrameAt(fr * 2 / rate)), -1); lastFi = fr; }
+    const fr = Math.floor(t * fps + 1e-7);
+    if (fr !== lastFi) { writeLines(grab(srcFrameAt(fr / fps)), -1); lastFi = fr; }
     curParity = 0;
   } else {
     const fi = Math.floor(t * rate + 1e-7);
@@ -1083,12 +1083,13 @@ function labInterlace() {
   }
   hctx.putImageData(out, 0, 0);
   drawToScreen(hold, W, H, W / H);
-  const lines = s.system === 50 ? 576 : 480;
-  const tag = s.scan === 'p' ? `${lines}p${s.system / 2}` : `${lines}i${s.system}`;
+  const lines = fps === 25 ? '576' : fps === 30 ? '480' : '';
+  const tag = lines ? `${lines}${s.scan === 'p' ? 'p' : 'i'}/${fps}` : `${fps} FPS`;
+  const fpsTxt = `${fps} FRAME${fps > 1 ? 'S' : ''}/S`;
   const mode = { p: 'PROGRESSIVE', i: 'INTERLACED · WEAVE', field: 'SINGLE FIELD', bob: 'BOB · LINE DOUBLING' }[s.scan];
   osdInfo = [`${tag}  ${mode}`];
-  if (s.scan === 'p') osdInfo.push(`${s.system / 2} FRAMES/S · ${(2000 / s.system).toFixed(1)} MS APART`);
-  else osdInfo.push(`${s.system} FIELDS/S · ${(1000 / s.system).toFixed(1)} MS APART`, `FIELD ${curParity ? 'B · EVEN LINES' : 'A · ODD LINES'}`);
+  if (s.scan === 'p') osdInfo.push(`${fpsTxt} · ${(1000 / fps).toFixed(1)} MS APART`);
+  else osdInfo.push(`${fpsTxt} = ${rate} FIELDS/S`, `FIELDS ${(1000 / rate).toFixed(1)} MS APART`, `FIELD ${curParity ? 'B · EVEN LINES' : 'A · ODD LINES'}`);
   if (s.lines > 1) osdInfo.push(`<span>LINE SIZE ×${s.lines}</span>`);
   vfdInfo = `${tag} ${s.scan === 'p' ? 'PROG' : s.scan.toUpperCase()}`;
 }
@@ -1218,7 +1219,7 @@ let lastTC = '', lastVS = '';
 function updateVFD() {
   let base = 25;
   if (state.module === 'fps') base = state.fps.rate;
-  else if (state.module === 'interlace' && state.interlace.system === 60) base = 30;
+  else if (state.module === 'interlace') base = state.interlace.rate;
   const t = Math.max(0, srcTime());
   const fr = Math.floor(t * base + 1e-6);
   const ff = fr % base, s = Math.floor(fr / base), m = Math.floor(s / 60), h = Math.floor(m / 60);

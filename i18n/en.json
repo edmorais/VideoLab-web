@@ -31,15 +31,20 @@
       "aspect-fit": "How the picture is placed on a screen of a different shape",
       "aspect-anamorphic": "SQUEEZE records a wide picture in a 4:3 frame; UNSQUEEZE tells the monitor to stretch it back",
       "interlace-scan": "Progressive frames, woven fields, a single field, or line-doubled fields",
-      "interlace-system": "50 Hz (PAL, Europe) or 60 Hz (NTSC, Americas and Japan)",
       "interlace-lines": "Makes each scan line thicker so the structure is easy to see",
       "sampling-scheme": "How many pixels share one chrominance sample",
       "sampling-display": "Show luminance (Y), chrominance (CbCr), or both",
       "sampling-exag": "Enlarge the chroma blocks to make the effect obvious",
       "depth-bits": "Bits used for each of R, G and B",
-      "depth-options": "Ordered dithering and a gradient chart overlay"
+      "depth-options": "Ordered dithering and a gradient chart overlay",
+      "interlace-rate": "Frames per second. An interlaced frame carries two fields: 25 frames = 50 fields (PAL), 30 = 60 (NTSC). Low rates let you watch the fields alternate."
     },
-    "help": { "prev": "Back", "next": "Next", "done": "Done", "close": "Close tutorial" },
+    "help": {
+      "prev": "Back",
+      "next": "Next",
+      "done": "Done",
+      "close": "Close tutorial"
+    },
     "panel_empty": "Choose a lab mode above, or press <kbd>1</kbd>–<kbd>6</kbd>. Each lab has its own controls here and a short tutorial under <kbd>?</kbd>."
   },
   "msg": {
@@ -105,22 +110,36 @@
         },
         {
           "title": "Choose a signal",
-          "targets": ["source", "load", "screen"],
+          "targets": [
+            "source",
+            "load",
+            "screen"
+          ],
           "body": "<p><strong>LIVE</strong> uses your webcam; the browser will ask for permission. <strong>LOAD FILE</strong> opens a video or image from your computer. You can also drop a file onto the deck. Files stay on your computer.</p><p><strong>TEST SIGNAL</strong> plays Videolab's test card, designed to show every effect: the circle and squares (aspect), the gradients (colour depth), the coloured lettering (chroma), the fine lines (resolution and interlace), and the moving ball and wheel (motion).</p>"
         },
         {
           "title": "Transport and display",
-          "targets": ["transport", "vfd"],
+          "targets": [
+            "transport",
+            "vfd"
+          ],
           "body": "<p><strong>STILL</strong> freezes the picture. The two <strong>SPEED</strong> keys slow playback down to 1/16 or speed it up to ×2. Slow motion makes frames and fields much easier to see.</p><p>The display shows the time code (hours:minutes:seconds:frames) and the current settings.</p>"
         },
         {
           "title": "Lab modes",
-          "targets": ["modes", "panel"],
+          "targets": [
+            "modes",
+            "panel"
+          ],
           "body": "<p>Choose one of the six labs. Its controls appear on the panel below. The first time you open a lab, a short tutorial explains the concept. Press <kbd>?</kbd> at any time to read it again.</p><p>Press the lit lab key again to switch the lab off and see the untouched signal.</p>"
         },
         {
           "title": "Looking closer",
-          "targets": ["display", "monitor-aspect", "screen"],
+          "targets": [
+            "display",
+            "monitor-aspect",
+            "screen"
+          ],
           "body": "<p><strong>ZOOM</strong> magnifies the picture from ×2 to ×16. Click the screen to choose where to look, and drag to move around. Double-click toggles a ×4 zoom; the mouse wheel also zooms. From about ×8 a grid outlines each pixel.</p><p><strong>4:3 / 16:9</strong> changes the shape of the monitor. <strong>SNAP</strong> saves the picture, <strong>OSD</strong> hides the on-screen text, and <strong>LANGUAGE</strong> switches between English and Portuguese.</p>"
         },
         {
@@ -147,7 +166,11 @@
         },
         {
           "title": "Try it",
-          "targets": ["res-lines", "res-scaler", "screen"],
+          "targets": [
+            "res-lines",
+            "res-scaler",
+            "screen"
+          ],
           "body": "<p>Lower the number of lines and watch the vertical bars in the middle of the test card. When the raster cannot reproduce them, the bars turn grey or form false patterns: this is <em>aliasing</em> (moiré).</p><p>Compare the two scalers, then use ZOOM ×8 or more to see the pixel grid.</p>"
         }
       ]
@@ -175,7 +198,11 @@
         },
         {
           "title": "Try it",
-          "targets": ["fps-rate", "fps-shutter", "screen"],
+          "targets": [
+            "fps-rate",
+            "fps-shutter",
+            "screen"
+          ],
           "body": "<p>Change the frame rate and the shutter angle while you watch the ball and the wheel.</p><p class=\"small\">Most screens refresh 60 times per second. Rates that do not divide 60 exactly (50, 25, 24) are shown with uneven repetitions, a stutter called <em>judder</em>. Television had the same problem when showing 24 fps films at 60 Hz, solved with the 3:2 pulldown.</p>"
         }
       ]
@@ -209,7 +236,13 @@
         },
         {
           "title": "Try it",
-          "targets": ["aspect-picture", "aspect-fit", "aspect-anamorphic", "monitor-aspect", "screen"],
+          "targets": [
+            "aspect-picture",
+            "aspect-fit",
+            "aspect-anamorphic",
+            "monitor-aspect",
+            "screen"
+          ],
           "body": "<p>Change the shape of the picture and of the monitor, then compare box, crop and stretch. On the test card, the circle must stay round and the grid squares must stay square.</p><p>Choose a 16:9 picture and press <strong>SQUEEZE</strong>: the inset shows what is recorded on tape. Switch <strong>UNSQUEEZE</strong> off to see the picture on a monitor that ignores the anamorphic signal.</p>"
         }
       ]
@@ -243,8 +276,14 @@
         },
         {
           "title": "Try it",
-          "targets": ["interlace-scan", "interlace-system", "interlace-lines", "speed", "screen"],
-          "body": "<p>Compare <strong>PROG</strong> and <strong>INTER</strong> while the ball moves. <strong>FIELD</strong> shows one field at a time, as a CRT would; <strong>BOB</strong> shows a line-doubled field.</p><p>Slow playback down to 1/16 to see the two fields alternate. <strong>LINE SIZE</strong> makes each line thicker, so the structure is easier to see.</p>"
+          "targets": [
+            "interlace-scan",
+            "interlace-rate",
+            "interlace-lines",
+            "speed",
+            "screen"
+          ],
+          "body": "<p>Compare <strong>PROG</strong> and <strong>INTER</strong> while the ball moves. <strong>FIELD</strong> shows one field at a time, as a CRT would; <strong>BOB</strong> shows a line-doubled field.</p><p><strong>FRAME RATE</strong> sets the frames per second; each interlaced frame holds two fields, so 25 frames give 50 fields. At 2 or 1 frames per second you can watch the fields alternate, or slow playback down to 1/16. <strong>LINE SIZE</strong> makes each line thicker, so the structure is easier to see.</p>"
         }
       ]
     },
@@ -275,12 +314,20 @@
         },
         {
           "title": "Try it",
-          "targets": ["sampling-display", "sampling-scheme", "screen"],
+          "targets": [
+            "sampling-display",
+            "sampling-scheme",
+            "screen"
+          ],
           "body": "<p>Switch luminance (<strong>Y</strong>) and chrominance (<strong>CbCr</strong>) on and off. With Y only you see a black-and-white television picture. With CbCr only you see how little detail colour carries.</p><p>Then try the different subsampling types on the coloured lettering of the test card.</p>"
         },
         {
           "title": "Make it obvious",
-          "targets": ["sampling-exag", "zoom", "screen"],
+          "targets": [
+            "sampling-exag",
+            "zoom",
+            "screen"
+          ],
           "body": "<p><strong>EXAGGERATE</strong> enlarges the chroma blocks so the effect is visible at a glance. At ×1 the simulation is true to scale.</p><p>Use ZOOM on a coloured edge to see the real blocks pixel by pixel.</p>"
         }
       ]
@@ -303,7 +350,11 @@
         },
         {
           "title": "Try it",
-          "targets": ["depth-bits", "depth-options", "screen"],
+          "targets": [
+            "depth-bits",
+            "depth-options",
+            "screen"
+          ],
           "body": "<p>Lower the number of bits and watch the gradients and the sky. <strong>GRADIENT</strong> places a chart of ramps over the picture; <strong>DITHER</strong> applies an ordered 4 × 4 dither.</p><p class=\"small\">Most screens show 8 bits per channel, so depths above 8 cannot be simulated. The low depths show the kind of banding that appears when 8-bit footage is graded.</p>"
         }
       ]
