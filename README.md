@@ -10,15 +10,35 @@ technical properties of a moving picture while it plays:
 5. **Chroma sampling** — Y′CbCr 4:4:4, 4:2:2, 4:2:0, 4:1:1; luma and chroma on/off; exaggerated chroma blocks.
 6. **Colour depth** — 8 … 1 bits per channel, ordered dithering, gradient chart.
 
-Sources: the built-in test card, the webcam, or any video or image file (open it or drop it on the deck).
-Every lab has a tutorial in English and Portuguese.
-
 See it in action at <https://edmorais.github.io/VideoLab-web/>
 
-The original Videolab was written in Processing by Eduardo Morais (2013–2021):
+You may switch sources: the built-in test card, the webcam, or any video or image file (open it or drop it on the deck).
+Every lab has a tutorial in English and Portuguese.
+
+The original Videolab was written in Processing (2013–2021):
 <https://github.com/edmorais/VideoLab>
 
 This web version was remade using Claude Opus 5.5. 
+
+
+## Keyboard
+
+| Key | Action |
+| --- | --- |
+| Space | still / play |
+| ↑ ↓ | playback speed (1/16× … 2×) |
+| 1–6, 0 | choose a lab, or switch labs off |
+| Z, Shift+Z | zoom in, zoom out (click the screen to aim, drag to pan, double-click for ×4) |
+| M | 4:3 or 16:9 monitor |
+| O | on-screen text |
+| Shift+S | save the picture as PNG |
+| H, ?, F1 | tutorial (← → turn pages) |
+| L | language |
+| Esc | close the tutorial, or leave the lab |
+
+A lab can also be opened from the address: `index.html#sampling` (`res`, `fps`, `aspect`,
+`interlace`, `sampling`, `depth`).
+
 
 ## Run it
 
@@ -55,24 +75,6 @@ in `index.html` (`#k-lang`), which now toggles between `en` and `pt`.
 
 The hardware labels on the panel stay in English in both languages, as in the original
 Videolab, so that students learn the bilingual vocabulary of video equipment.
-
-## Keyboard
-
-| Key | Action |
-| --- | --- |
-| Space | still / play |
-| ↑ ↓ | playback speed (1/16× … 2×) |
-| 1–6, 0 | choose a lab, or switch labs off |
-| Z, Shift+Z | zoom in, zoom out (click the screen to aim, drag to pan, double-click for ×4) |
-| M | 4:3 or 16:9 monitor |
-| O | on-screen text |
-| Shift+S | save the picture as PNG |
-| H, ?, F1 | tutorial (← → turn pages) |
-| L | language |
-| Esc | close the tutorial, or leave the lab |
-
-A lab can also be opened from the address: `index.html#sampling` (`res`, `fps`, `aspect`,
-`interlace`, `sampling`, `depth`).
 
 ## Notes on the simulation
 
